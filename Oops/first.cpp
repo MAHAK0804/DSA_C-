@@ -8,6 +8,12 @@ class student{
     int age;
     bool gender;
 
+    student (string s)
+    {
+        name =s;
+        cout<<name;
+    }
+
     void setName(strin s)
     {
         name=s;
@@ -42,4 +48,6 @@ int main()
     {
         arr[i].printInfo();
     }
+
+    student s("MAHAK");
 }
