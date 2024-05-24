@@ -119,6 +119,26 @@ if(head == NULL || head->next == NULL)
     return newhead;
 }
 
+node* reversek(node* &head, int k){
+    node* prevptr = NULL;
+    node* currptr = head;
+    node* nextptr;
+
+    int count = 0;
+    while(currptr!=NULL && count<k){
+        nextptr=currptr->next;
+        currptr->next = prevptr;
+        prevptr = currptr;
+        currptr = nextptr;
+        count++;
+    }
+
+    if(nextptr!=NULL){
+        head->next = reversek(nextptr, k);
+    }
+    return prevptr;
+
+}
 
 void display(node* head)
 {
@@ -137,14 +157,18 @@ int main()
     insertAtTail(head,1);
     insertAtTail(head,2);
     insertAtTail(head,3);
+    // display(head);
+    // insertAthead(head,4);
+    // display(head);
+    // cout<<search(head,6)<<endl;
+    // deletion(head, 3);
+    // display(head);
+    // deleteAtHead(head);
+    // display(head);
+    // node* newhead = reverseRecursive(head);
+    // display(newhead);
     display(head);
-    insertAthead(head,4);
-    display(head);
-    cout<<search(head,6)<<endl;
-    deletion(head, 3);
-    display(head);
-    deleteAtHead(head);
-    display(head);
-    node* newhead = reverseRecursive(head);
+    int k=2;
+    node* newhead = reversek(head,k);
     display(newhead);
 }
