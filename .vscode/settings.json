@@ -1,4 +1,5 @@
 {
     "cmake.sourceDirectory": "C:/Users/HP/Documents/My important document/DSA(C++)",
-    "cmake.configureOnOpen": true
+    "cmake.configureOnOpen": true,
+    "C_Cpp.errorSquiggles": "disabled"
 }

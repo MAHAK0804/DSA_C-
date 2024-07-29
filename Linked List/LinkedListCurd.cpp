@@ -23,8 +23,7 @@ void insertAthead(node* &head, int val)
     n->next = head;
     head = n;
 }
-void insertAtTail(node* &head, int val){
-    node* n = new node(val);
+      node* n = new node(val);
 
     if(head == NULL){
         head = n;
