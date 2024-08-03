@@ -17,7 +17,7 @@ void insertAtBottom(stack<int> &st, int ele)
 
 }
 
-void reverse(stack<int>st)
+void reverse(stack<int>&st)
 {
     if(st.empty())
     {
@@ -40,7 +40,7 @@ int main()
 reverse(st);
 while(!st.empty())
 {
-    cout<<st.top()<<endl;
+    cout<<st.top()<<" ";
     st.pop();
 }
 

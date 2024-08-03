@@ -25,6 +25,6 @@ void reverse(string s)
 
 int main()
 {
-    string s="MAHAK";
+    string s="MAHAK is a Engineer.";
   reverse(s);
 }
